@@ -1,4 +1,4 @@
-export default function promiseMiddleware() {
+export default function promiseMiddleware () {
   return next => action => {
     const { promise, type, ...rest } = action
 
@@ -10,8 +10,8 @@ export default function promiseMiddleware() {
     next({ ...rest, type: REQUEST })
 
     return promise
-      .then(response => ({json: response.data, status: response.statusText}))
-      .then(({json,status}) => {
+      .then(response => ({ json: response.data, status: response.statusText }))
+      .then(({ json, status }) => {
         next({ ...rest, json, type: SUCCESS })
         return true
       })

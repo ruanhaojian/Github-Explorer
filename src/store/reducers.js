@@ -12,8 +12,6 @@ import coreLayoutReducer from '../routes/CoreLayout/modules/CoreLayout'
 // import repoDetailReducer from '../routes/CoreLayout/modules/RepoDetail'
 import mainContentReducer from '../routes/CoreLayout/modules/MainContent'
 
-
-
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     // Add sync reducers here

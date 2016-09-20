@@ -11,21 +11,20 @@ import {
 import UserPage from 'components/UserPage/UserPage'
 
 const mapDispatchToProps = {
-    getRandomUser,
-    getUserProfile,
-    getUserProfileRepos,
-    clearUserPage,
-    triggerLoadAnimation,
-    triggerLoadAnimationDone,
-    triggerLoadAnimationHide,
-    triggerLoadAnimationFailed
+  getRandomUser,
+  getUserProfile,
+  getUserProfileRepos,
+  clearUserPage,
+  triggerLoadAnimation,
+  triggerLoadAnimationDone,
+  triggerLoadAnimationHide,
+  triggerLoadAnimationFailed
 }
 
 const mapStateToProps = (state) => {
-    return {
-        UserPageReducer : state.UserPageReducer.toJS()
-    }
+  return {
+    UserPageReducer : state.UserPageReducer.toJS()
+  }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserPage)

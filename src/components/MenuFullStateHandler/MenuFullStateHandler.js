@@ -1,40 +1,37 @@
-import React from 'react';
-import './MenuFullStateHandler.scss';
+import React from 'react'
+import './MenuFullStateHandler.scss'
 
 export default class MenuFullStateHandler extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-        };
+  constructor () {
+    super()
+    this.state = {
     }
+  }
 
-    static propTypes = {
-        menuFullStateReducer: React.PropTypes.object.isRequired
-    }
+  static propTypes = {
+    menuFullStateReducer : React.PropTypes.object.isRequired
+  }
 
-
-    shouldComponentUpdate(nextProps, nextState){
-
-        return (
+  shouldComponentUpdate (nextProps, nextState) {
+    return (
             nextProps.menuFullStateReducer.full != this.props.menuFullStateReducer.full
         )
-    }
+  }
 
-    componentDidMount() {
-        
-    }
+  componentDidMount () {
 
-    componentWillUnmount() {
-    }
+  }
 
-    render() {
+  componentWillUnmount () {
+  }
 
-        var { full } = this.props.menuFullStateReducer
+  render () {
+    var { full } = this.props.menuFullStateReducer
 
-        return (
-            <input type="checkbox" id="nav-menu-full-checkbox" checked={full} />
-        );
-    }
+    return (
+            <input type='checkbox' id='nav-menu-full-checkbox' checked={full} />
+        )
+  }
 
 }

@@ -32,8 +32,7 @@ import UserPage from '../../components/UserPage'
 
 // Sync route definition
 export default {
-    path: '/user/:username',
-    component : UserPage
+  path      : '/user/:username',
+  component : UserPage
 }
 
- 

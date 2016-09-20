@@ -1,65 +1,62 @@
-import React from 'react';
-import classNames from 'classnames';
-import './Image.scss';
+import React from 'react'
+import classNames from 'classnames'
+import './Image.scss'
 
 export default class Image extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            loaded: false,
-        };
-        this.onImageLoad = this.onImageLoad.bind(this);
+  constructor () {
+    super()
+    this.state = {
+      loaded : false
     }
+    this.onImageLoad = this.onImageLoad.bind(this)
+  }
 
-    componentDidMount() {
-        if (this.props.src) {
-            this.img = new window.Image();
-            this.img.onload = this.onImageLoad;
-            this.img.src = this.props.src;
-        }
+  componentDidMount () {
+    if (this.props.src) {
+      this.img = new window.Image()
+      this.img.onload = this.onImageLoad
+      this.img.src = this.props.src
     }
+  }
 
-    shouldComponentUpdate(nextProps, nextState){
-
-        return (
+  shouldComponentUpdate (nextProps, nextState) {
+    return (
             nextProps.src != this.props.src ||
             nextState.loaded != this.state.loaded
         )
+  }
 
+  componentWillReceiveProps (nextProps) {
+    if (this.props.src !== nextProps.src) {
+      this.img = new window.Image()
+      this.img.onload = this.onImageLoad
+      this.img.src = nextProps.src
+      this.setState({ loaded: false })
     }
+  }
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props.src !== nextProps.src) {
-            this.img = new window.Image();
-            this.img.onload = this.onImageLoad;
-            this.img.src = nextProps.src;
-            this.setState({ loaded: false });
-        }
+  componentWillUnmount () {
+    if (this.img) {
+      this.img.onload = () => {}
     }
+  }
 
-    componentWillUnmount() {
-        if (this.img) {
-            this.img.onload = () => {};
-        }
-    }
+  onImageLoad () {
+    this.setState({ loaded: true })
+  }
 
-    onImageLoad() {
-        this.setState({ loaded: true });
-    }
-    
-    render() {
-        return (
+  render () {
+    return (
             <div
-                id={this.props.id}
-                className={classNames(this.props.className, ' image-fade')}
-                style={this.state.loaded ? {
-          backgroundImage: `url('${this.props.src}')`,
-          opacity: 1,
-        } : {}}
-            >
-            </div>
-        );
-    }
+              id={this.props.id}
+              className={classNames(this.props.className, ' image-fade')}
+              style={this.state.loaded ? {
+                backgroundImage : `url('${this.props.src}')`,
+                opacity         : 1
+              } : {}}
+             />
+        )
+  }
 
 }

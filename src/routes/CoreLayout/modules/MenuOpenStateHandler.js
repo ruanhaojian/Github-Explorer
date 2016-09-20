@@ -4,40 +4,38 @@ import {
     CLOSE_NAV_MENU
 } from 'actions/types'
 import { createReducer } from 'redux-immutablejs'
-import {fromJS} from 'immutable'
+import { fromJS } from 'immutable'
 
 const initialState = fromJS({
-    open: false,
+  open : false
 })
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-    [TOGGLE_NAV_MENU]: (state,action)=>{
-        return state.merge({
-            open: !state.toJS().open,
-        })
-    },
-    [OPEN_NAV_MENU]: (state,action)=>{
-
-        return state.merge({
-            open: true,
-        })
-    },
-    [CLOSE_NAV_MENU]: (state,action)=>{
-
-        return state.merge({
-            open: false,
-        })
-    },
+  [TOGGLE_NAV_MENU] : (state, action) => {
+    return state.merge({
+      open : !state.toJS().open
+    })
+  },
+  [OPEN_NAV_MENU] : (state, action) => {
+    return state.merge({
+      open : true
+    })
+  },
+  [CLOSE_NAV_MENU] : (state, action) => {
+    return state.merge({
+      open : false
+    })
+  }
 }
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
 export default function moduleReducer (state = initialState, action) {
-    const handler = ACTION_HANDLERS[action.type]
+  const handler = ACTION_HANDLERS[action.type]
 
-    return handler ? handler(state, action) : state
+  return handler ? handler(state, action) : state
 }

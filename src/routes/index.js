@@ -15,11 +15,11 @@ import RepoDetailRoute from './RepoDetail'
 export const createRoutes = (store) => ({
   path        : '/',
   component   : CoreLayout,
-  indexRoute  : {component: UserPage},
+  indexRoute  : { component: UserPage },
   childRoutes : [
     {
-      path: '/user/:username',
-      component:UserPage
+      path      : '/user/:username',
+      component : UserPage
     },
     RepoListRoute(store),
     RepoDetailRoute(store)
@@ -45,7 +45,6 @@ export const createRoutes = (store) => ({
 //     },
 //   ]
 // })
-
 
 /*  Note: childRoutes can be chunked or otherwise loaded programmatically
     using getChildRoutes with the following signature:

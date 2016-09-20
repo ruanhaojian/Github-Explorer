@@ -1,5 +1,5 @@
-import './third-party/bootstrap.js';
-import './inspectocat.png';
+import './third-party/bootstrap.js'
+import './inspectocat.png'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
