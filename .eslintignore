@@ -1,6 +1,6 @@
 blueprints/**/files/**
 coverage/**
 node_modules/**
+bower_components/**
 dist/**
 src/index.html
-src/**
