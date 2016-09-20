@@ -1,0 +1,11 @@
+.DS_STORE
+*.log
+
+node_modules
+
+bower_components
+
+dist
+coverage
+
+.idea/
