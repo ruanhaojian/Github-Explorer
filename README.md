@@ -2,6 +2,12 @@
 
 ### Install dependencies, and check to see it works [Live Demo](https://ruanhaojian.github.io/Github-Explorer-Demo/)
 
+###Or scanning
+
+<img src="https://ruanhaojian.github.io/Github-Explorer-Demo/qr_code.png" />
+
+#Run npm
+
 ```bash
 $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
