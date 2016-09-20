@@ -1,6 +1,6 @@
 # github-explorer
 
-### Install dependencies, and check to see it works
+### Install dependencies, and check to see it works [Live Demo](https://ruanhaojian.github.io/Github-Explorer-Demo/)
 
 ```bash
 $ npm install                   # Install project dependencies
