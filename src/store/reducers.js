@@ -7,9 +7,9 @@ import loadingBlockReducer from '../routes/CoreLayout/modules/LoadingBlock'
 import menuOpenStateReducer from '../routes/CoreLayout/modules/MenuOpenStateHandler'
 import menuFullStateReducer from '../routes/CoreLayout/modules/MenuFullStateHandler'
 import navMenuReducer from '../routes/CoreLayout/modules/NavMenu'
-// import repoListReducer from '../routes/CoreLayout/modules/RepoList'
+import repoListReducer from '../routes/CoreLayout/modules/RepoList'
 import coreLayoutReducer from '../routes/CoreLayout/modules/CoreLayout'
-// import repoDetailReducer from '../routes/CoreLayout/modules/RepoDetail'
+import repoDetailReducer from '../routes/CoreLayout/modules/RepoDetail'
 import mainContentReducer from '../routes/CoreLayout/modules/MainContent'
 
 export const makeRootReducer = (asyncReducers) => {
@@ -23,8 +23,8 @@ export const makeRootReducer = (asyncReducers) => {
     menuOpenStateReducer,
     menuFullStateReducer,
     UserPageReducer,
-    // repoListReducer,
-    // repoDetailReducer,
+    repoListReducer,
+    repoDetailReducer,
     ...asyncReducers
   })
 }
