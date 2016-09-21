@@ -1,5 +1,5 @@
-import React from 'react'
-import action, { ACTIONS } from '../action/action.js'
+// import React from 'react'
+// import action, { ACTIONS } from '../action/action.js'
 
 if ('serviceWorker' in navigator) {
   // Your service-worker.js *must* be located at the top-level directory relative to your site.
@@ -22,29 +22,36 @@ if ('serviceWorker' in navigator) {
               // have been added to the cache.
               // It's the perfect time to display a "New content is available; please refresh."
               // message in the page's interface.
-              action.onNext({
-                name : ACTIONS.SHOW_TOAST,
-                data : {
-                  message : 'New version is available!',
-                  button  : (
-                    <a
-                      onClick={() => location.reload()}
-                      className='toast-button'
-                    >UPDATE
-                    </a>),
-                  timeout : 0
-                }
-              })
+              // action.onNext({
+              //   name : ACTIONS.SHOW_TOAST,
+              //   data : {
+              //     message : 'New version is available!',
+              //     button  : (
+              //       <a
+              //         onClick={() => location.reload()}
+              //         className='toast-button'
+              //       >UPDATE
+              //       </a>),
+              //     timeout : 0
+              //   }
+              // })
+
+              alert('New version is available!')
+              location.reload()
+
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a "Content is cached for offline use." message.
-              action.onNext({
-                name : ACTIONS.SHOW_TOAST,
-                data : {
-                  message : 'Content is now available offline!',
-                  timeout : 5000
-                }
-              })
+              // action.onNext({
+              //   name : ACTIONS.SHOW_TOAST,
+              //   data : {
+              //     message : 'Content is now available offline!',
+              //     timeout : 5000
+              //   }
+              // })
+
+              alert('Content is now available offline!')
+              // document.getElementById('root').innerHTML = 'Content is now available offline!'
             }
             break
 
