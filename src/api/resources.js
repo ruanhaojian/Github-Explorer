@@ -12,13 +12,11 @@ const api = (url) =>
         .then(response => response.json())
         .then(data => {
           if (data.errors) {
-            // action.onNext({ name: ACTION_TYPES.REQUEST_FAILED, data });
             return Promise.reject(data)
           }
           return data
         })
         .catch((...args) => {
-          // action.onNext({ name: ACTION_TYPES.REQUEST_FAILED, data: [...args] });
           return Promise.reject(...args)
         })
 
