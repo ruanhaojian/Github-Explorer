@@ -13,7 +13,7 @@ export default () => (
         </div>
         <div id='footer-credit'>
             GitHub concept by Quan &amp; Bang<br />
-            Created by ruanhaojian
+            Created by rhj
         </div>
     </div>
 )

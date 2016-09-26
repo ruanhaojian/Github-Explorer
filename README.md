@@ -35,9 +35,10 @@ While developing, you will probably rely mostly on `npm start`; however, there a
 
 #Tech stack:
 * ReactJS for UI
-* Redux for state data manage
+* Redux for state management
 * Webpack for bundle
 * Babel for ES6 syntax
+* redux-cli for building the project's structure
 * ...and more, please check `package.json`
 
 # about this project
