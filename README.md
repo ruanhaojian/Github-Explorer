@@ -38,12 +38,12 @@ While developing, you will probably rely mostly on `npm start`; however, there a
 * Redux for state management
 * Webpack for bundle
 * Babel for ES6 syntax
-* redux-cli for building the project's structure
+* redux-cli [`react-redux-starter-kit`](https://github.com/davezuko/react-redux-starter-kit) for building the project's structure
 * ...and more, please check `package.json`
 
 # about this project
 
-Reference trungdq88's [`github-explorer`](https://github.com/trungdq88/github-explorer) project, using [`react-redux-starter-kit`](https://github.com/davezuko/react-redux-starter-kit) scaffolding to create.
+Reference trungdq88's [`github-explorer`](https://github.com/trungdq88/github-explorer) project which using RxJS.
 
 #TODOS
 
