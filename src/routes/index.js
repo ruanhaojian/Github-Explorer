@@ -1,9 +1,9 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../layouts/CoreLayout'
 import NotFound from '../components/NotFound/NotFound'
-// import HomeRoute from './Home'
 // import UserPage from './UserPage'
-// import CounterRoute from './Counter'
+
+
 import UserPage from '../components/UserPage'
 import RepoList from '../components/RepoList'
 import RepoDetail from '../components/RepoDetail'

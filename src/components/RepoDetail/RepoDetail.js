@@ -70,7 +70,7 @@ export default class RepoDetail extends React.Component {
   }
 
   getProfile () {
-    this.props.getRepoPageDetail(this.props.params.username, this.props.params.repoName).done(() => this.switchTab({
+    this.props.getRepoPageDetail(this.props.params.username, this.props.params.repoName).then(() => this.switchTab({
       key : 'readme'
     }))
   }

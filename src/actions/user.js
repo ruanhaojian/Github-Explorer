@@ -76,14 +76,6 @@ export function searchUserRepos (user, keyword, page) {
   }
 }
 
-Promise.prototype.done = function (onFulfilled, onRejected) {
-  this.then(onFulfilled, onRejected)
-        .catch(function (reason) {
-            // 抛出一个全局错误
-          setTimeout(() => { throw reason }, 0)
-        })
-}
-
 export function getRepoPageDetail (username, repoName) {
   return (dispatch, getState) => {
     dispatch({ type: types.TRIGGER_LOAD_ANIMATION })
@@ -138,28 +130,4 @@ export function getRepoPageDetail (username, repoName) {
   }
 }
 
-// export function getRandomUser() {
-//     return (dispatch,getState)=>{
-//
-//         dispatch({type: types.TRIGGER_LOAD_ANIMATION})
-//
-//         return api.getRandomUser()
-//             .then(data => {
-//                 // alert(JSON.stringify(data))
-//                 const user = data.items[0]
-//                 api.getUserProfile(user.login)
-//                     .then(profile => dispatch({type: types.USER_PROFILE_RECEIVED, data: profile }))
-//                     .then(()=>{
-//
-//                         dispatch({type: types.TRIGGER_LOAD_ANIMATION_DONE})
-//                         setTimeout(function () {
-//                             dispatch({type: types.TRIGGER_LOAD_ANIMATION_HIDE})
-//                         }, 600)
-//
-//                     })
-//
-//                 return data
-//             })
-//     }
-// }
 
