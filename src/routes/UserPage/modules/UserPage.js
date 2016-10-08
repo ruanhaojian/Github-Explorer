@@ -43,8 +43,10 @@ const ACTION_HANDLERS = {
 // ------------------------------------
 // Reducer
 // ------------------------------------
-export default function counterReducer (state = initialState, action) {
-  const handler = ACTION_HANDLERS[action.type]
+// export default function counterReducer (state = initialState, action) {
+//   const handler = ACTION_HANDLERS[action.type]
+//
+//   return handler ? handler(state, action) : state
+// }
 
-  return handler ? handler(state, action) : state
-}
+export default createReducer(initialState,ACTION_HANDLERS)

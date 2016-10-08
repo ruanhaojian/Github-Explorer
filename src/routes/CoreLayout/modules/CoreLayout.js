@@ -6,7 +6,7 @@ import {
     UPDATE_CORE_DATA
 } from '../../../actions/types'
 import { fromJS } from 'immutable'
-
+import { createReducer } from 'redux-immutablejs'
 import { matchParams } from '../../../utils/routes'
 
 export function openNavMenu () {
@@ -62,8 +62,10 @@ const ACTION_HANDLERS = {
 // ------------------------------------
 // Reducer
 // ------------------------------------
-export default function moduleReducer (state = initialState, action) {
-  const handler = ACTION_HANDLERS[action.type]
+// export default function moduleReducer (state = initialState, action) {
+//   const handler = ACTION_HANDLERS[action.type]
+//
+//   return handler ? handler(state, action) : state
+// }
 
-  return handler ? handler(state, action) : state
-}
+export default createReducer(initialState,ACTION_HANDLERS)
