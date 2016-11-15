@@ -43,6 +43,11 @@ While developing, you will probably rely mostly on `npm start`; however, there a
 
 # about this project
 
+##Relevant
+
+[github-explorer-vue](https://github.com/ruanhaojian/github-explorer-vue)   [github-explorer-ng2](https://github.com/ruanhaojian/github-explorer-ng2)
+
+
 Reference trungdq88's [`github-explorer`](https://github.com/trungdq88/github-explorer) project which using RxJS.
 
 #TODOS
